@@ -1,0 +1,118 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #f5d9d5;
+}
+
+h2 {
+    font-weight: 100;
+    color: #EA1C2C;
+    font-size: 2.5rem;
+}
+
+.lead {
+    color: #f498b8;
+    font-weight: 100;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #EA1C2C;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#headingGroup span {
+    color: #EA1C2C;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.navbar.scrolled {
+    background: rgb(247, 201, 247);
+    transition: background 1s;
+}
+
+.picture {
+    width: calc((100% - 60px) / 2);
+    perspective: 1500px;
+    -moz-perspective: 1000px;
+    position: relative;
+    height: 500px;
+    backface-visibility: hidden;
+}
+
+.side {
+    width: calc((100% - 60px) / 2);
+    perspective: 1500px;
+    -moz-perspective: 1000px;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 15px 8px rgba(black, 0.15);
+    height: 500px;
+    width: 100%;
+}
+
+.front-side {
+    transition: all 0.8s ease;
+    width: calc((100% - 60px) / 2);
+    perspective: 1500px;
+    -moz-perspective: 1500px;
+    transform: rotateY(0);
+    position: absolute;
+    backface-visibility: hidden;
+    height: 500px;
+    top: 0;
+    left: 0;
+}
+
+.back {
+    transition: all 0.8s ease;
+    width: calc((100% - 60px) / 2);
+    height: 500px;
+    perspective: 1500px;
+    -moz-perspective: 1000px;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.picture:hover .front-side {
+    transform: rotateY(180deg);
+}
+
+.picture:hover .back {
+    transform: rotateY(0);
+}
+
+@media (max-width:1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3.5rem;
+    }
+}
